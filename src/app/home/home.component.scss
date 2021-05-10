@@ -1,0 +1,28 @@
+.cvs-padding {
+  padding-left: 4rem;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: #495057;
+  border-radius: 0;
+  background-color: rgb(150, 21, 21, 0.8);
+  border-color: rgb(150, 21, 21) rgb(150, 21, 21) rgb(150, 21, 21);
+}
+
+.nav-tabs {
+  border-radius: 0;
+  background-color: rgb(53, 53, 53);
+  border-bottom: 2px solid rgb(150, 21, 21);
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+  border-color: rgb(150, 21, 21) rgb(150, 21, 21) rgb(150, 21, 21);
+  border-radius: 0;
+  isolation: isolate;
+}
+
+.cvs-bg-red {
+  background-color: rgb(156, 6, 6);
+}

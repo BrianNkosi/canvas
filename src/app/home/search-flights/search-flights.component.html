@@ -1,0 +1,115 @@
+<div class="row bg-light p-4">
+  <form
+    novalidate
+    (ngSubmit)="saveFlights()"
+    [formGroup]="flightsForm"
+    class="form"
+  >
+    <div class="row">
+      <div class="d-flex justify-content-start col-md-4 w-50">
+        <label class="cvs-bold">BOOK YOUR FLIGHTS</label>
+      </div>
+      <div class="d-flex justify-content-end col-md-4 d-inline-block w-50">
+        <button
+          type="button"
+          [ngClass]="{ 'btn-danger': type }"
+          (click)="toggle('domestic')"
+          class="btn btn-sm d-inline-block cvs-br-0"
+        >
+          Domestic
+        </button>
+        <button
+          type="button"
+          [ngClass]="{ 'btn-danger': !type }"
+          (click)="toggle('international')"
+          class="btn btn-sm d-inline-block cvs-br-0"
+        >
+          International
+        </button>
+      </div>
+    </div>
+    <div class="row w-100">
+      <div class="col-md-4 w-50">
+        <div class="mb-3">
+          <label for="fromInput" class="form-label cvs-font-8">FROM</label>
+          <input
+            [ngClass]="{ 'is-invalid': message.fromFlight }"
+            type="text"
+            formControlName="fromFlight"
+            class="form-control form-control-sm cvs-br-0"
+            id="fromInput"
+            placeholder=""
+          />
+        </div>
+      </div>
+      <div class="col-md-4 w-50">
+        <div class="mb-3">
+          <label for="toInput" class="form-label cvs-font-8">TO</label>
+          <input
+            type="text"
+            [ngClass]="{ 'is-invalid': message.toFlight }"
+            formControlName="toFlight"
+            class="form-control form-control-sm cvs-br-0"
+            id="toInput"
+            placeholder=""
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row w-100">
+      <div class="col-md-4 w-40">
+        <div class="mb-3">
+          <label for="departureInput" class="form-label cvs-font-8"
+            >DEPARTURE</label
+          >
+          <input
+            type="date"
+            [ngClass]="{ 'is-invalid': message.departure }"
+            formControlName="departure"
+            class="form-control form-control-sm cvs-br-0 text-uppercase"
+            id="departureInput"
+            placeholder=""
+          />
+        </div>
+      </div>
+      <div class="col-md-4 w-40">
+        <div class="mb-3">
+          <label for="returnInput" class="text-sm-start form-label cvs-font-8"
+            >RETURN</label
+          >
+          <input
+            type="date"
+            [ngClass]="{ 'is-invalid': message.returnDate }"
+            formControlName="returnDate"
+            class="form-control form-control-sm cvs-br-0 text-uppercase"
+            id="returnInput"
+            placeholder=""
+          />
+        </div>
+      </div>
+      <div class="col-md-4 w-20">
+        <div class="mb-3">
+          <label for="adultsInput" class="form-label cvs-font-8">ADULTS</label>
+          <input
+            type="number"
+            [ngClass]="{ 'is-invalid': message.adults }"
+            formControlName="adults"
+            class="form-control form-control-sm cvs-br-0"
+            id="adultsInput"
+            placeholder=""
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row w-100">
+      <div class="d-flex justify-content-start col-md-4 w-50">
+        <button type="submit" class="btn btn-sm mb-3 btn-danger cvs-br-0">
+          SEARCH FLIGHTS
+        </button>
+      </div>
+      <div class="d-flex justify-content-end col-md-4 w-50">
+        <a class="text-bold-italic">Advanced Search</a>
+      </div>
+    </div>
+  </form>
+</div>

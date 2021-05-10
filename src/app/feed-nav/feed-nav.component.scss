@@ -1,0 +1,26 @@
+.cvs-border-bottom {
+  border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+}
+select {
+  outline: none;
+}
+
+.cvs-select {
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  margin-top: 0.55rem;
+}
+
+.cvs-select-option {
+  background: transparent;
+  color: rgb(0, 0, 0);
+}
+
+
+
+.cvs-select-option:hover {
+  background: transparent;
+  color: rgb(0, 0, 0);
+}

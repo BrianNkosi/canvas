@@ -1,0 +1,44 @@
+<div class="cvs-padding m-5 row w-100">
+  <div class="col-md-5 m-4">
+    <div class="w-100">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a
+            class="nav-link active text-light"
+            [routerLink]="['/home/flights']"
+            routerLinkActive="active"
+            ><fa-icon [icon]="faPlane"></fa-icon> FLIGHTS</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-light"
+            [routerLink]="['/home/hotels']"
+            routerLinkActive="active"
+            ><fa-icon [icon]="faHotel"></fa-icon> HOTELS</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-light"
+            [routerLink]="['#']"
+            routerLinkActive="active"
+            >FLIGHTS + HOTELS
+            <span class="badge badge-danger cvs-bg-red">New</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-light"
+            [routerLink]="['#']"
+            routerLinkActive="active"
+            ><fa-icon [icon]="faGift"></fa-icon> HOLDAYS</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="w-100">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

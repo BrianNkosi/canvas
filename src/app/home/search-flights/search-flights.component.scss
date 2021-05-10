@@ -1,0 +1,37 @@
+.cvs-bold {
+  font-weight: bold;
+}
+
+.cvs-br-0 {
+  border-radius: 0;
+}
+
+.cvs-font-8 {
+  font-size: 8pt;
+}
+
+.text-bold-italic {
+  font-weight: bold;
+  color: rgb(156, 6, 6);
+  font-style: italic;
+}
+
+.w-20 {
+  width: 20% !important;
+}
+
+.w-40 {
+  width: 40% !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: rgb(156, 6, 6);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(156 6 6 / 25%);
+}

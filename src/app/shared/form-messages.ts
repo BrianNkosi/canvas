@@ -14,4 +14,10 @@ export const FormMessages = {
   adults: {
     required: 'Number of adults is required.',
   },
+  username: {
+    required: 'Username is required.',
+  },
+  password: {
+    required: 'Password is required.',
+  },
 };

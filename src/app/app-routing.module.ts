@@ -7,23 +7,19 @@ import { SearchHotelsComponent } from './home/search-hotels/search-hotels.compon
 import { HomeShellComponent } from './home/home-shell/home-shell.component';
 import { FlightsComponent } from './flights/flights.component';
 import { ShellFlightsComponent } from './flights/shell-flights/shell-flights.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
-    path: '',
-    component: HomeShellComponent,
-    children: [
-      {
-        path: 'home',
-        component: HomeComponent,
-        children: [
-          { path: 'flights', component: SearchFlightsComponent },
-          { path: 'hotels', component: SearchHotelsComponent },
-          { path: '', redirectTo: 'flights', pathMatch: 'full' },
-        ],
-      },
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
-    ],
+    path: 'login',
+    loadChildren: () =>
+      import('./login/login.module').then((m) => m.LoginModule),
+  },
+  {
+    path: 'home',
+    loadChildren: () =>
+      import('./home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'flights',
